@@ -4,7 +4,7 @@ $(document).ready(() => {
     if (this.hash !== "") {
       event.preventDefault();
 
-      var hash = this.hash;
+      let hash = this.hash;
 
       $('html, body').animate({
         scrollTop: $(hash).offset().top
@@ -15,8 +15,8 @@ $(document).ready(() => {
   });
 });
 
-$(window).scroll(event => {
-  var scroll = $(window).scrollTop();
+window.addEventListener('scroll', () => {
+  let scroll = $(window).scrollTop();
 
   if(scroll > 0)
     $('.my-navbar').addClass("my-navbar-scroll");

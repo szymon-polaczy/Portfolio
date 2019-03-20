@@ -1,0 +1,27 @@
+{
+  "name": "Szymon Polaczy - Programista Minimalista",
+  "short_name": "Polaczy",
+  "display": "standalone",
+  "start_url": ".",
+  "dir": "ltr",
+  "lang": "pl",
+  "theme_color": "#fefefe",
+  "background_color": "#fefefe",
+  "icons": [
+    {
+      "src": "./img/logo_512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "./img/logo_192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./img/logo_64.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    }
+  ]
+}

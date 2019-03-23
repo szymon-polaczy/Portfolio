@@ -15,13 +15,18 @@ $(document).ready(() => {
   });
 });
 
+//poniżej nie ma jquery
 window.addEventListener('scroll', () => {
-  let scroll = $(window).scrollTop();
+  let scroll = window.pageYOffset || document.documentElement.scrollTop;
+  let my_navbar = document.getElementById('my-navbar');
 
-  if(scroll > 0)
-    $('.my-navbar').addClass("my-navbar-scroll");
-  else if (scroll == 0)
-    $('.my-navbar').removeClass("my-navbar-scroll");
+  if(scroll > 0) {
+    my_navbar.classList.add('my-navbar-scroll');
+    console.log('Adding my-navbar-scroll class.');
+  } else if (scroll == 0) {
+    my_navbar.classList.remove('my-navbar-scroll');
+    console.log('Removing my-navbar-scroll class.');
+  }
 });
 
 window.addEventListener('load', () => {

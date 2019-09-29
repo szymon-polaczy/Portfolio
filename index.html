@@ -1,3 +1,5 @@
+<!--app.js to es6 - then budle to es5 - best option for future work-->
+
 <!doctype html>
 <html lang="pl">
 <head>
@@ -9,13 +11,19 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="Szymon Polaczy">
+
+    <link href="reset.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
 </head>
 <body>
     <nav>
-        <li><a href="#home-section">Home</a></li>
-        <li><a href="#about-section">About</a></li>
-        <li><a href="#service-section">Service</a></li>
-        <li><a href="#contact-section">Contact</a></li>
+        <p>Szymon Polaczy</p>
+        <ul>
+            <li><a href="#home-section" onclick="smoothScroll('home-section'); return false">Home</a></li>
+            <li><a href="#about-section" onclick="smoothScroll('about-section'); return false">About</a></li>
+            <li><a href="#service-section" onclick="smoothScroll('service-section'); return false">Service</a></li>
+            <li><a href="#contact-section" onclick="smoothScroll('contact-section'); return false">Contact</a></li>
+        </ul>
     </nav>
 
     <header id="home-section">
@@ -27,6 +35,7 @@
     <main>
         <section id="about-section">
             <h2>About Me</h2>
+            <img src="img/me.jpeg">
             <article>
                 <p>Szymon Polaczy, I'm 18</p>
                 <p>About 3 years ago I started to be interested in computers. From that time on I was wanting to know more about them.
@@ -69,5 +78,7 @@
             </div>            
         </section>
     </main>
+
+    <script src="app.js"></script>
 </body>
 </html>

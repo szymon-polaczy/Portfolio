@@ -80,6 +80,12 @@ h2::after {
     align-items: center;
     justify-content: center;
     flex-flow: column;
+    background-image: url("img/adorable-animal.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    clip-path: polygon(50% 0%, 100% 0, 100% 85%, 69% 100%, 0 90%, 0 0); /*Zastanów się czy na pewno chcesz to używać bo nie ma najlepszego wsparcia*/
 }
 
 #home-section .all-container a img {
@@ -89,6 +95,24 @@ h2::after {
     animation-duration: 1.5s;
     animation-delay: .3s;
     animation-iteration-count: infinite;
+}
+
+#home-section .all-container h1 {
+    font-size: 4.5em;
+    text-align: center;
+    margin-bottom: 2.5vh;
+    letter-spacing: .1vw;
+}
+
+#home-section .all-container small {
+    font-size: 1em;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#home-section .all-container small span{
+    display: inline-block;
+    margin: 0 1vw;
 }
 
 @keyframes clickMe {

@@ -63,6 +63,7 @@ h2 {
     font-size: 2em;
     text-align: center;
     padding: 2vh 0;
+    margin-top: 10vh;
 }
 
 h2::after {
@@ -85,7 +86,7 @@ h2::after {
     background-size: cover;
     background-repeat: no-repeat;
     color: #fff;
-    clip-path: polygon(50% 0%, 100% 0, 100% 85%, 69% 100%, 0 90%, 0 0); /*Zastanów się czy na pewno chcesz to używać bo nie ma najlepszego wsparcia*/
+    clip-path: polygon(50% 0%, 100% 0, 100% 93%, 35% 100%, 0 90%, 0 0); /*Zastanów się czy na pewno chcesz to używać bo nie ma najlepszego wsparcia*/
 }
 
 #home-section .all-container a img {
@@ -135,4 +136,39 @@ h2::after {
     100% {
         transform: translateY(0);
     }
+}
+
+#about-section {
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#about-section img {
+    max-width: 90%;
+    border-radius: 100%;
+    box-sizing: border-box;
+}
+
+#about-section p:first-child {
+    font-size: 2em;
+    padding: 3.5vh 0;
+}
+
+#about-section p:last-child {
+    padding: 0 4vw;
+    line-height: 150%;
+}
+
+#service-section {
+    clip-path: polygon(35% 10%, 100% 0, 100% 93%, 35% 100%, 0 90%, 0 0);
+    background: #ccc;
+    padding-top: 9vh;
+    padding-bottom: 9vh;
+}
+
+#contact-section {
+    background: #bbb;
 }

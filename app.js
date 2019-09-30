@@ -1,3 +1,7 @@
+/*--------------------------------------------------------------------------
+                START FOR SMOOTH SCROLLING
+--------------------------------------------------------------------------*/
+
 function currentYPosition() {
     // Firefox, Chrome, Opera, Safari
     if (self.pageYOffset) return self.pageYOffset;
@@ -40,5 +44,23 @@ function smoothScroll(eID) {
     for ( var i=startY; i>stopY; i-=step ) {
         setTimeout("window.scrollTo(0, "+leapY+")", timer * speed);
         leapY -= step; if (leapY < stopY) leapY = stopY; timer++;
+    }
+}
+
+/*--------------------------------------------------------------------------
+                END FOR SMOOTH SCROLLING
+--------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------
+                START FOR MENU SHOWING
+--------------------------------------------------------------------------*/
+
+
+//coś z tym jest nie tak bo po pierwszym przeładowaniu strony nie działa - trzeba kliknąć drugi raz
+function toggleVisibility(eID) {
+    var element = document.getElementById(eID);
+    if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
     }
 }

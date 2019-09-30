@@ -17,67 +17,74 @@
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
-    <nav>
-        <p>Szymon Polaczy</p>
-        <ul>
-            <li><a href="#home-section" onclick="smoothScroll('home-section'); return false">Home</a></li>
-            <li><a href="#about-section" onclick="smoothScroll('about-section'); return false">About</a></li>
-            <li><a href="#service-section" onclick="smoothScroll('service-section'); return false">Service</a></li>
-            <li><a href="#contact-section" onclick="smoothScroll('contact-section'); return false">Contact</a></li>
-        </ul>
+    <nav class="navbar">
+        <div class="all-container">
+            <div class="sm-screen-menu">
+                <p>Szymon Polaczy</p>
+                <button onclick="toggleVisibility('menu')">X</button>
+            </div>
+            <ul id="menu">
+                <li><a href="#home-section" onclick="smoothScroll('home-section'); return false">Home</a></li>
+                <li><a href="#about-section" onclick="smoothScroll('about-section'); return false">About</a></li>
+                <li><a href="#service-section" onclick="smoothScroll('service-section'); return false">Service</a></li>
+                <li><a href="#contact-section" onclick="smoothScroll('contact-section'); return false">Contact</a></li>
+            </ul>
     </nav>
 
     <header id="home-section">
-        <h1>Szymon Polaczy</h1>
-        <small>Web Developer | 3D Modeler</small>
-        <a href="#about-section"><img src="icons/angle-down-solid.svg" alt="Learn More"></a>
+        <div class="all-container">
+            <h1>Szymon Polaczy</h1>
+            <small>Web Developer | 3D Modeler</small>
+            <a href="#about-section" onclick="smoothScroll('about-section'); return false"><img src="icons/angle-down-solid.svg" alt="Learn More"></a>  
+        </div>
     </header>
 
     <main>
-        <section id="about-section">
-            <h2>About Me</h2>
-            <img src="img/me.jpeg">
-            <article>
-                <p>Szymon Polaczy, I'm 18</p>
-                <p>About 3 years ago I started to be interested in computers. From that time on I was wanting to know more about them.
-                    Right now I'm 18 years old and creating web aplications and 3d models. For my clients and for my own use and fun.</p>
-            </article>
-            
-        </section>
-        <section id="service-section">
-            <h2>My Services</h2>
-            <div class="services-container">
-                <article class="service">
-                    <h4>Web</h4>
-                    <p>Websites and Web Apps made with customer in mind.</p>
+        <div class="all-container">
+            <section id="about-section">
+                <h2>About Me</h2>
+                <img src="img/me.jpeg" alt="My Photo">
+                <article>
+                    <p>Szymon Polaczy, I'm 18</p>
+                    <p>About 3 years ago I started to be interested in computers. From that time on I was wanting to know more about them.
+                        Right now I'm 18 years old and creating web aplications and 3d models. For my clients and for my own use and fun.</p>
                 </article>
-                <article class="service">
-                    <h4>3D Modeling</h4>
-                    <p>3D Models made with love for detail.</p>
-                </article>
-            </div>
-        </section>
-        <section id="contact-section">
-            <h2>Contact me!</h2>
-            <div class="contacts-container">
-                    <article class="contact">
-                        <img src="icons/phone-solid.svg" alt="Learn More">
-                        +48 691 644 081
-                    </article>  
-                    <article class="contact">
-                        <img src="icons/envelope-solid.svg" alt="Learn More">
-                        polaczyszymon@gmail.com
+            </section>
+            <section id="service-section">
+                <h2>My Services</h2>
+                <div class="services-container">
+                    <article class="service">
+                        <h4>Web</h4>
+                        <p>Websites and Web Apps made with customer in mind.</p>
                     </article>
-                    <article class="contact">
-                        <img src="icons/github-brands.svg" alt="Learn More">
-                        Github
+                    <article class="service">
+                        <h4>3D Modeling</h4>
+                        <p>3D Models made with love for detail.</p>
                     </article>
-                    <article class="contact">
-                        <img src="icons/instagram-brands.svg" alt="Learn More">
-                        Instagram
-                    </article>
-            </div>            
-        </section>
+                </div>
+            </section>
+            <section id="contact-section">
+                <h2>Contact me!</h2>
+                <div class="contacts-container">
+                        <article class="contact">
+                            <img src="icons/phone-solid.svg" alt="Learn More">
+                            +48 691 644 081
+                        </article>  
+                        <article class="contact">
+                            <img src="icons/envelope-solid.svg" alt="Learn More">
+                            polaczyszymon@gmail.com
+                        </article>
+                        <article class="contact">
+                            <img src="icons/github-brands.svg" alt="Learn More">
+                            Github
+                        </article>
+                        <article class="contact">
+                            <img src="icons/instagram-brands.svg" alt="Learn More">
+                            Instagram
+                        </article>
+                </div>            
+            </section>
+        </div>
     </main>
 
     <script src="app.js"></script>

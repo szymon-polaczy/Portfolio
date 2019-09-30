@@ -144,6 +144,7 @@ h2::after {
     text-align: center;
     align-items: center;
     justify-content: center;
+    padding-bottom: 12vh;
 }
 
 #about-section img {
@@ -164,11 +165,61 @@ h2::after {
 
 #service-section {
     clip-path: polygon(35% 10%, 100% 0, 100% 93%, 35% 100%, 0 90%, 0 0);
-    background: #ccc;
-    padding-top: 9vh;
-    padding-bottom: 9vh;
+    background: #eee;
+    padding-bottom: 12vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+}
+
+#service-section img {
+    width: 15vw;
+    margin-bottom: 1.5vh;
+}
+
+#service-section img:first-child {
+    margin-top: 2.5vh;
+}
+
+#service-section h4 {
+    font-size: 1.5em;
+    color: #222;
+    margin-bottom: 3vh;
+}
+
+#service-section p {
+    padding: 0 4vw;
+    line-height: 135%;
+}
+
+.service:first-child {
+    margin-bottom: 3vh; 
 }
 
 #contact-section {
-    background: #bbb;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-flow: column;
+}
+
+.contacts-container {
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.contact {
+    width: 40vw;
+    padding: 5vw;
+    font-size: .8em;
+    text-align: center;
+}
+
+.contact img {
+    margin-bottom: 2vh;
 }

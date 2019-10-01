@@ -75,18 +75,25 @@ h2::after {
     margin: 1vh auto 0 auto;
 }
 
-#home-section .all-container {
+#home-section {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-flow: column;
-    background-image: url("img/adorable-animal.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    color: #fff;
+    background-image: url("img/adorable-animal.jpg");    
     clip-path: polygon(50% 0%, 100% 0, 100% 93%, 35% 100%, 0 90%, 0 0); /*Zastanów się czy na pewno chcesz to używać bo nie ma najlepszego wsparcia*/
+}
+
+#home-section .all-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    color: #fff;
 }
 
 #home-section .all-container a img {
@@ -103,6 +110,8 @@ h2::after {
     text-align: center;
     margin-bottom: 2.5vh;
     letter-spacing: .1vw;
+    margin-top: 10vh;
+    text-shadow: .1vh .1vw 1vh #000;
 }
 
 #home-section .all-container small {
@@ -111,7 +120,7 @@ h2::after {
     text-align: center;
 }
 
-#home-section .all-container small span{
+#home-section .all-container small span {
     display: inline-block;
     margin: 0 1vw;
 }
@@ -166,7 +175,8 @@ h2::after {
 #service-section {
     clip-path: polygon(35% 10%, 100% 0, 100% 93%, 35% 100%, 0 90%, 0 0);
     background: #eee;
-    padding-bottom: 12vh;
+    padding-bottom: 15vh;
+    padding-top: 5vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -211,15 +221,75 @@ h2::after {
     align-items: center;
     justify-content: center;
     text-align: center;
+    margin-bottom: 5vh;
 }
 
 .contact {
-    width: 40vw;
-    padding: 5vw;
+    width: 45vw;
+    padding: 2.5vw;
     font-size: .8em;
     text-align: center;
 }
 
+.contact a {
+    cursor: pointer;
+}
+
 .contact img {
     margin-bottom: 2vh;
+}
+
+@media screen and (min-width:1000px) {
+    .all-container {
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .contact {
+        width: 10vw;
+        font-size: 1em;
+    }
+
+    .contact img {
+        margin-bottom: 2.5vh;
+    }
+
+    .service {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .service:first-child {
+        flex-flow: row;
+    }
+
+    .service:last-child {
+        flex-flow: row-reverse;
+    }
+
+    .service:first-child p {
+        text-align: left;
+    }
+
+    .service:last-child p {
+        text-align: right;
+    }
+
+    #about-section {
+        padding-bottom: 0vh;
+    }
+
+    #about-section .all-container div {
+        display: flex;
+        align-items: center;
+    }
+
+    #about-section .all-container div article {
+        text-align: left;
+    }
+
+    #about-section .all-container div article p:first-child {
+        padding: 0 4vw 3vh 4vw;
+    }
 }

@@ -125,6 +125,8 @@ h2::after {
     margin: 0 1vw;
 }
 
+/*dodaj więcej animacji - prostych ale dodaj*/
+/*dodaj animacje wysuwania się menu głównego*/
 @keyframes clickMe {
     0% {
         transform: translateY(0);
@@ -169,7 +171,7 @@ h2::after {
 
 #about-section p:last-child {
     padding: 0 4vw;
-    line-height: 150%;
+    line-height: 200%;
 }
 
 #service-section {
@@ -201,7 +203,7 @@ h2::after {
 
 #service-section p {
     padding: 0 4vw;
-    line-height: 135%;
+    line-height: 165%;
 }
 
 .service:first-child {
@@ -213,6 +215,10 @@ h2::after {
     align-items: center;
     justify-content: space-around;
     flex-flow: column;
+}
+
+#contact-section small {
+    padding-bottom: 3.5vh;
 }
 
 .contacts-container {
@@ -239,9 +245,14 @@ h2::after {
     margin-bottom: 2vh;
 }
 
+/*dodaj więcej breakpointó*/
+/*popraw wyświetlanie na dużych ekranach*/
+/*popraw wyświetlanie przy około 1000px*/
 @media screen and (min-width:1000px) {
     .all-container {
-        max-width: 1200px;
+        max-width: 75%;
+        padding: 0 5vw;
+        box-sizing: border-box;
         margin: auto;
     }
 
@@ -268,6 +279,10 @@ h2::after {
         flex-flow: row-reverse;
     }
 
+    #service-section p {
+        line-height: 230%;
+    }
+
     .service:first-child p {
         text-align: left;
     }
@@ -289,7 +304,26 @@ h2::after {
         text-align: left;
     }
 
+    #about-section img {
+        width: 30vw;
+    }
+
     #about-section .all-container div article p:first-child {
         padding: 0 4vw 3vh 4vw;
+    }
+
+    .navbar .all-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-flow: row;
+    }
+
+    .navbar .sm-screen-menu button{
+        display: none;
+    }
+
+    .navbar #menu {
+        display: flex;
     }
 }

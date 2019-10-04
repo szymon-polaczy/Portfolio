@@ -85,7 +85,7 @@ h2::after {
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url("img/adorable-animal.jpg");    
-    clip-path: polygon(50% 0%, 100% 0, 100% 93%, 35% 100%, 0 90%, 0 0); /*Zastanów się czy na pewno chcesz to używać bo nie ma najlepszego wsparcia*/
+    clip-path: polygon(50% 0%, 100% 0, 100% 93%, 35% 100%, 0 90%, 0 0);
 }
 
 #home-section .all-container {
@@ -125,8 +125,6 @@ h2::after {
     margin: 0 1vw;
 }
 
-/*dodaj więcej animacji - prostych ale dodaj*/
-/*dodaj animacje wysuwania się menu głównego*/
 @keyframes clickMe {
     0% {
         transform: translateY(0);
@@ -245,9 +243,6 @@ h2::after {
     margin-bottom: 2vh;
 }
 
-/*dodaj więcej breakpointó*/
-/*popraw wyświetlanie na dużych ekranach*/
-/*popraw wyświetlanie przy około 1000px*/
 @media screen and (min-width:1000px) {
     .all-container {
         max-width: 75%;

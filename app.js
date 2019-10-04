@@ -54,8 +54,6 @@ function smoothScroll(eID) {
                 START FOR MENU SHOWING
 --------------------------------------------------------------------------*/
 
-
-//coś z tym jest nie tak bo po pierwszym przeładowaniu strony nie działa - trzeba kliknąć drugi raz
 function toggleVisibility(eID) {
     var element = document.getElementById(eID);
     if (element.style.display === "none") {

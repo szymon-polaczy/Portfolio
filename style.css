@@ -22,7 +22,6 @@ a {
     z-index: 100;
     background-color: #fff;
     width: 100%;
-    padding: 1em;
     box-sizing: border-box;
 }
 
@@ -30,6 +29,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 1em;
 }
 
 .navbar .all-container {
@@ -44,11 +44,12 @@ a {
 }
 
 #menu {
+    padding: 0 1em 1em 1em;
     display: none;
 }
 
 .navbar ul li {
-    padding-right: 2em;
+    line-height: 150%;
 }
 
 .navbar ul li a {
@@ -56,7 +57,7 @@ a {
 }
 
 .navbar ul li:hover a {
-    color: #f33;
+    color: #b7d9b4;
 }
 
 h2 {
@@ -71,7 +72,7 @@ h2::after {
     display: block;
     width: 2em;
     height: .2vh;
-    background: #f33;
+    background: #b7d9b4;
     margin: 1vh auto 0 auto;
 }
 
@@ -177,10 +178,6 @@ h2::after {
     background: #eee;
     padding-bottom: 15vh;
     padding-top: 5vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-flow: column;
     text-align: center;
 }
 
@@ -236,10 +233,16 @@ h2::after {
 }
 
 .contact a {
+    font-size: 1em;
     cursor: pointer;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .contact img {
+    width: 75%;
     margin-bottom: 2vh;
 }
 
@@ -252,38 +255,47 @@ h2::after {
     }
 
     .contact {
-        width: 10vw;
+        width: calc(25% - 4em);
+        padding: 2em;
         font-size: 1em;
     }
 
+    .contact a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-flow: column;
+    }
+
     .contact img {
+        width: 75%;
         margin-bottom: 2.5vh;
+    }
+
+    .services-container {
+        display: flex;
+        flex-flow: row;
     }
 
     .service {
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-flow: column;
+        width: 50%;
     }
 
-    .service:first-child {
-        flex-flow: row;
+    .service img:first-child {
+        height: 20vh;
     }
 
-    .service:last-child {
-        flex-flow: row-reverse;
+    .service-img {
+        margin-bottom: 2vh;
     }
 
     #service-section p {
         line-height: 230%;
-    }
-
-    .service:first-child p {
-        text-align: left;
-    }
-
-    .service:last-child p {
-        text-align: right;
+        text-align: center;
     }
 
     #about-section {
@@ -320,5 +332,12 @@ h2::after {
 
     .navbar #menu {
         display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .navbar ul li {
+        margin-right: 1vw;
     }
 }

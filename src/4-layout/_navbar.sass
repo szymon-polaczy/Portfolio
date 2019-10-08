@@ -1,0 +1,56 @@
+.navbar 
+    background: #000
+    position: fixed
+    top: 0
+    z-index: 100
+    background-color: #fff
+    width: 100%
+    box-sizing: border-box
+
+.navbar .sm-screen-menu 
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 1em
+
+.navbar .all-container 
+    display: flex
+    flex-flow: column
+
+.navbar button 
+    padding: 1em
+    background: transparent
+    border: 2px solid #444
+
+#menu 
+    padding: 0 1em 1em 1em
+    display: none
+
+.navbar ul li 
+    line-height: 150%
+
+.navbar ul li a 
+    color: #aaa
+
+.navbar ul li:hover a 
+    color: #b7d9b4
+
+@media screen and (min-width: 1000px)
+    .navbar .all-container 
+        display: flex
+        align-items: center
+        justify-content: space-between
+        flex-flow: row
+
+    .navbar .sm-screen-menu button
+        display: none
+
+    .navbar #menu
+        display: flex
+        align-items: center
+        justify-content: center
+        padding: 0
+
+    .navbar ul li 
+        margin-right: 1vw
+    

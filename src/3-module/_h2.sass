@@ -1,13 +1,21 @@
 h2 
-    font-size: 2em
+    font-size: 4vh
     text-align: center
-    padding: 2vh 0
+    padding: 2vh 0 3.5vh 0
     margin-top: 10vh
 
-h2::after 
-    content: ''
-    display: block
-    width: 2em
-    height: .2vh
-    background: #b7d9b4
-    margin: 1vh auto 0 auto
+    &::after 
+        content: ''
+        display: block
+        width: 10vw
+        height: .3vh
+        background: $base-color
+        margin: 1vh auto 0 auto
+
+@media screen and (min-width: 1000px)
+    h2
+        font-size: 2.5vh
+
+        &::after
+            width: 5vw
+            height: .25vh

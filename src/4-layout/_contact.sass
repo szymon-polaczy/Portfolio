@@ -5,6 +5,7 @@
     flex-flow: column
 
     small 
+        font-size: 2.25vh
         padding-bottom: 3.5vh
 
 .contacts-container 
@@ -18,11 +19,10 @@
     .contact 
         width: 45vw
         padding: 2.5vw
-        font-size: .8em
+        font-size: 1.75vh
         text-align: center
 
         a 
-            font-size: 1em
             cursor: pointer
             display: flex
             flex-flow: column
@@ -34,10 +34,13 @@
             margin-bottom: 2vh
 
 @media screen and (min-width:1000px) 
+    #contact-section small
+        font-size: 1.7vh
+        
     .contacts-container .contact 
-        width: calc(25% - 4em)
-        padding: 2em
-        font-size: 1em
+        width: calc(15vw - 4vw)
+        padding: 2vw
+        font-size: 2vh
 
         a 
             display: flex

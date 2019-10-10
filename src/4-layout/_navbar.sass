@@ -1,11 +1,10 @@
 .navbar 
-    background: #000
     position: fixed
     top: 0
     z-index: 100
     background-color: #fff
     width: 100%
-    box-sizing: border-box
+    font-size: 2.5vh
 
 .navbar .sm-screen-menu 
     display: flex
@@ -17,10 +16,13 @@
     display: flex
     flex-flow: column
 
-.navbar button 
-    padding: 1em
-    background: transparent
-    border: 2px solid #444
+.navbar button
+    width: 10vw
+    transition: transform .15s ease-in-out
+
+    &:hover
+        transform: scale(1.1)
+        transition: transform .2s ease-in-out
 
 #menu 
     padding: 0 1em 1em 1em
@@ -29,13 +31,14 @@
 .navbar ul li 
     line-height: 150%
 
-.navbar ul li a 
-    color: #aaa
-
-.navbar ul li:hover a 
-    color: #b7d9b4
+@media screen and (min-width: 550px)
+    .navbar button
+        width: 5vw
 
 @media screen and (min-width: 1000px)
+    .navbar 
+        font-size: 1.65vh
+
     .navbar .all-container 
         display: flex
         align-items: center

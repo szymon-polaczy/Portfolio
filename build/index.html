@@ -10,15 +10,29 @@
     <meta name="description" content="Szymon Polaczy, I'm 18. About 3 years ago I started to be interested in computers. From that time on I was wanting to know more about them. Right now I'm 18 years old and creating web aplications and 3d models. For my clients and for my own use and fun.">
     <meta name="author" content="Szymon Polaczy">
 
+    <link rel="icon" sizes="32x32" href="img/Logo - 32.png">
+    <link rel="icon" sizes="64x64" href="img/Logo - 64.png">
+    <link rel="manifest" href="manifest.json">
+
     <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
     <link href="css/app.css" rel="stylesheet">
+
+    <script>
+        // Check that service workers are supported
+        if ('serviceWorker' in navigator) {
+          // Use the window load event to keep the page load performant
+          window.addEventListener('load', () => {
+            navigator.serviceWorker.register('sw.js');
+          });
+        }
+    </script>
 </head>
 <body>
     <nav class="navbar">
         <div class="all-container">
             <div class="sm-screen-menu">
                 <p>Szymon Polaczy</p>
-                <button onclick="toggleVisibility('menu')"><img src="icons/bars-solid.svg" alt="Menu Button"></button>
+                <button onclick="toggleVisibility('menu')"><img src="svg/bars-solid.svg" alt="Menu Button"></button>
             </div>
             <ul id="menu">
                 <li><a href="#home-section" onclick="smoothScroll('home-section'); return false">Home</a></li>
@@ -32,7 +46,7 @@
         <div class="all-container">
             <h1>Szymon Polaczy</h1>
             <small>Web Developer <span>|</span> 3D Modeler</small>
-            <a href="#about-section" onclick="smoothScroll('about-section'); return false"><img src="icons/angle-down-solid.svg" alt="Learn More"></a>
+            <a href="#about-section" onclick="smoothScroll('about-section'); return false"><img src="svg/angle-down-solid.svg" alt="Learn More"></a>
         </div>
     </header>
 
@@ -58,7 +72,7 @@
                 <div class="services-container">
                     <article class="service">
                         <div>
-                            <img src="icons/mobile-alt-solid.svg" alt="Icon for my web skills.">
+                            <img src="svg/mobile-alt-solid.svg" alt="Icon for my web skills.">
                             <h4>Web</h4>
                         </div>
                         <p>
@@ -69,7 +83,7 @@
                     </article>
                     <article class="service">
                         <div>
-                            <img src="icons/cubes-solid.svg" alt="Icon for my 3D modeling skills.">
+                            <img src="svg/cubes-solid.svg" alt="Icon for my 3D modeling skills.">
                             <h4>3D Modeling</h4>
                         </div>
                         <p>
@@ -87,25 +101,25 @@
             <div class="contacts-container">
                 <article class="contact">
                     <a href="tel:+48691644081" target="_blank">
-                        <img src="icons/phone-solid.svg" alt="Learn More">
+                        <img src="svg/phone-solid.svg" alt="Learn More">
                         +48 691 644 081
                     </a>
                 </article>
                 <article class="contact">
                     <a href="mailto:polaczyszymon@gmail.com" target="_blank">
-                        <img src="icons/envelope-solid.svg" alt="Learn More">
+                        <img src="svg/envelope-solid.svg" alt="Learn More">
                         polaczyszymon@gmail.com
                     </a>
                 </article>
                 <article class="contact">
                     <a href="https://github.com/szymon-polaczy" target="_blank" rel="noreferrer">
-                        <img src="icons/github-brands.svg" alt="Learn More">
+                        <img src="svg/github-brands.svg" alt="Learn More">
                         Github
                     </a>
                 </article>
                 <article class="contact">
                     <a href="https://www.instagram.com/szymon_polaczy/" target="_blank" rel="noreferrer">
-                        <img src="icons/instagram-brands.svg" alt="Learn More">
+                        <img src="svg/instagram-brands.svg" alt="Learn More">
                         Instagram
                     </a>
                 </article>

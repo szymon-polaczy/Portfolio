@@ -1,15 +1,16 @@
-/*--------------------------------------------------------------------------
-                START FOR SMOOTH SCROLLING
---------------------------------------------------------------------------*/
-
 function currentYPosition() {
     // Firefox, Chrome, Opera, Safari
-    if (self.pageYOffset) return self.pageYOffset;
+    if (self.pageYOffset) 
+        return self.pageYOffset;
+
     // Internet Explorer 6 - standards mode
     if (document.documentElement && document.documentElement.scrollTop)
         return document.documentElement.scrollTop;
+
     // Internet Explorer 6, 7 and 8
-    if (document.body.scrollTop) return document.body.scrollTop;
+    if (document.body.scrollTop) 
+        return document.body.scrollTop;
+
     return 0;
 }
 
@@ -46,13 +47,6 @@ function smoothScroll(eID) {
         leapY -= step; if (leapY < stopY) leapY = stopY; timer++;
     }
 }
-
-/*--------------------------------------------------------------------------
-                END FOR SMOOTH SCROLLING
---------------------------------------------------------------------------*/
-/*--------------------------------------------------------------------------
-                START FOR MENU SHOWING
---------------------------------------------------------------------------*/
 
 function toggleVisibility(eID) {
     var element = document.getElementById(eID);

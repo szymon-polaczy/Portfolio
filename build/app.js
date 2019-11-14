@@ -48,11 +48,8 @@ function smoothScroll(eID) {
     }
 }
 
-function toggleVisibility(eID) {
+function toggleVisibilityMenu(eID) {
     var element = document.getElementById(eID);
-    if (element.style.display === "none") {
-        element.style.display = "block";
-    } else {
-        element.style.display = "none";
-    }
+    element.classList.toggle("show-menu");
+    element.classList.toggle("menu");
 }

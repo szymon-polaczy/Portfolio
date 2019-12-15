@@ -1,53 +1,66 @@
-importScripts('https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js');
+const cacheName = "serviceWorker-cashe";
+const staticAssets = [
+  "./",
+  "./manifest.json",
+  "./index.html",
+  "./css/app.css",
+  "./js/app.js",
+  "./adorable-animal-1080-1920.jpg",
+  "./adorable-animal-1080-2160.jpg",
+  "./adorable-animal-1920-1080.jpg",
+  "./adorable-animal-4896-3264.jpg",
+  "./img/logo - 32.png",
+  "./img/logo - 64.png",
+  "./img/logo - 128.png",
+  "./img/logo - 192.png",
+  "./img/logo - 256.png",
+  "./img/logo - 512.png",
+  "./img/me.jpeg",
+  "./svg/angle-down-solid.svg",
+  "./svg/bars-solid.svg",
+  "./svg/cubes-solid.svg",
+  "./scg/envelope-solid.svg",
+  "./svg/github-brands.svg",
+  "./svg/instagram-brands.svg",
+  "./svg/mobile-alt-solid.svg",
+  "./svg/phone-solid.svg"
+];
 
-if (workbox) {
-    console.log(`Yay! Workbox is loaded 🎉`);
-} else {
-    console.log(`Boo! Workbox didn't load 😬`);
+self.addEventListener("install", async e => {
+  const cache = await caches.open(cacheName);
+  await cache.addAll(staticAssets);
+  return self.skipWaiting();
+});
+
+self.addEventListener("activate", e => {
+  self.clients.claim();
+});
+
+self.addEventListener("fetch", async e => {
+  const req = e.request;
+  const url = new URL(req.url);
+
+  if (url.origin === location.origin) {
+    e.respondWith(cacheFirst(req));
+  } else {
+    e.respondWith(networkAndCache(req));
+  }
+});
+
+async function cacheFirst(req) {
+  const cache = await caches.open(cacheName);
+  const cached = await cache.match(req);
+  return cached || fetch(req);
 }
 
-workbox.routing.registerRoute(
-    // Cache CSS files.
-    /\.css$/,
-    // Use cache but update in the background.
-    new workbox.strategies.StaleWhileRevalidate({
-        // Use a custom cache name.
-        cacheName: 'css-cache',
-    })
-);
-
-workbox.routing.registerRoute(
-    //Cashe JS files
-    /\.js$/,
-    // Use cache but update in the background.
-    new workbox.strategies.StaleWhileRevalidate({
-        // Use a custom cache name.
-        cacheName: 'js-cashe',
-    })
-  ); 
-
-workbox.routing.registerRoute(
-    // Cache image files.
-    /\.(?:png|jpg|jpeg|svg|gif)$/,
-    // Use the cache if it's available.
-    new workbox.strategies.CacheFirst({
-        // Use a custom cache name.
-        cacheName: 'image-cache',
-        plugins: [
-            new workbox.expiration.Plugin({
-                // Cache only 20 images.
-                maxEntries: 20,
-                // Cache for a maximum of a week.
-                maxAgeSeconds: 7 * 24 * 60 * 60,
-            })
-        ],
-    })
-);
-
- // Cache the Google Fonts stylesheets with a stale while revalidate strategy.
- workbox.routing.registerRoute(
-    /^https:\/\/fonts\.googleapis\.com/,
-    new workbox.strategies.StaleWhileRevalidate({
-      cacheName: 'google-fonts-stylesheets',
-    }),
-  );
+async function networkAndCache(req) {
+  const cache = await caches.open(cacheName);
+  try {
+    const fresh = await fetch(req);
+    await cache.put(req, fresh.clone());
+    return fresh;
+  } catch (e) {
+    const cached = await cache.match(req);
+    return cached;
+  }
+}

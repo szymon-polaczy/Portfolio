@@ -24,12 +24,22 @@
         transform: scale(1.1)
         transition: transform .2s ease-in-out
 
-.menu 
-    display: none    
+.menu
+    display: none  
 
 .show-menu
     display: block
-    padding: 0 1em 1em 1em
+    padding: 0 1em 1em 1em 
+    animation: slide-right
+    animation-duration: .2s
+    animation-iteration-count: 1
+    animation-timing-function: ease-in-out
+
+@keyframes slide-right
+    from
+        transform: translateX(-100px)
+    to
+        transform: translateX(0)
 
 .navbar ul li 
     line-height: 150%

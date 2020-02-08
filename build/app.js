@@ -53,3 +53,41 @@ function toggleVisibilityMenu(eID) {
     element.classList.toggle("show-menu");
     element.classList.toggle("menu");
 }
+
+function changeColorSchemeOnload() {
+    if(localStorage.getItem("dark-theme") == null)
+        localStorage.setItem("dark-theme", false);
+
+    let body = document.getElementById("body");
+    let navbar = document.getElementById("navbar");
+    let service_section = document.getElementById("service-section");
+    let contact_section = document.getElementById("contact-section");
+
+    if (localStorage.getItem("dark-theme") == "true") {
+        body.classList.add("body-dark");
+        navbar.classList.add("navbar-dark");
+        service_section.classList.add("service-section-dark");
+        contact_section.classList.add("contact-section-dark");
+    } else {
+        body.classList.remove("body-dark");
+        navbar.classList.remove("navbar-dark");
+        service_section.classList.remove("service-section-dark");
+        contact_section.classList.remove("contact-section-dark");
+    }    
+}
+
+function changeColorScheme() {
+    let body = document.getElementById("body");
+    let navbar = document.getElementById("navbar");
+    let service_section = document.getElementById("service-section");
+    let contact_section = document.getElementById("contact-section");
+
+    body.classList.toggle("body-dark");
+    navbar.classList.toggle("navbar-dark");
+    service_section.classList.toggle("service-section-dark");
+    contact_section.classList.toggle("contact-section-dark");
+
+    localStorage.setItem("dark-theme", (localStorage.getItem("dark-theme") == "true"? "false" : "true"));
+}
+
+window.onload = changeColorSchemeOnload();

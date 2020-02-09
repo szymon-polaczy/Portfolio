@@ -56,7 +56,7 @@ function toggleVisibilityMenu(eID) {
 
 function changeColorSchemeOnload() {
     if(localStorage.getItem("dark-theme") == null)
-        localStorage.setItem("dark-theme", false);
+        localStorage.setItem("dark-theme", true);
 
     let body = document.getElementById("body");
     let navbar = document.getElementById("navbar");

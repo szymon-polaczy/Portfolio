@@ -36,8 +36,8 @@
             "type": "image/png"
         }
     ],
-    "scope": "/",
-    "start_url": "./build/",
+    "scope": "./Portfolio/build/",
+    "start_url": "./Portfolio/build/",
     "display": "standalone",
     "theme_color": "#ffffff",
     "background_color": "#ffffff",

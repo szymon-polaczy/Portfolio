@@ -37,7 +37,7 @@
         }
     ],
     "scope": "/",
-    "start_url": ".",
+    "start_url": "./build/",
     "display": "standalone",
     "theme_color": "#ffffff",
     "background_color": "#ffffff",

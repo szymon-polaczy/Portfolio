@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Szymon Polaczy - My Work</title>
+    <meta name="keywords" content="szymon polaczy, szymon, polaczy, web, developer, web development, webdev, programming, 3d modeling, 3d models, models">
+    <meta name="description" content="I'm Szymon Polaczy, About 3 years ago I got interested in computers. From that moment on I wanted to know more about them. Right now at age of 18 I’m creating web applications and 3D models for my clients, my own use and for fun.">
+    <meta name="author" content="Szymon Polaczy">
+
+    <link rel="apple-touch-icon" href="img/Logo - 192.png">
+    <link rel="apple-touch-startup-image" href="img/Logo - 512.png">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+
+    <meta name="msapplication-square64x64logo" content="img/Logo - 64.png">
+    <meta name="msapplication-square128x128logo" content="img/Logo - 128.png">
+
+    <link rel="icon" sizes="32x32" href="img/Logo - 32.png">
+    <link rel="icon" sizes="64x64" href="img/Logo - 64.png">
+    <link rel="icon" sizes="192x192" href="img/Logo - 192.png">
+    <link rel="manifest" href="manifest.json">
+
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
+
+    <script>
+        if (location.protocol != 'https:')
+            location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
+
+        // Check that service workers are supported
+        if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js');
+            });
+        }
+    </script>
+</head>
+
+<body id="body">
+    <nav id="navbar" class="navbar">
+        <div class="all-container">
+            <div class="sm-screen-menu">
+                <p>Szymon Polaczy</p>
+                <button onclick="toggleVisibilityMenu('menu')"><img src="svg/bars-solid.svg" alt="Menu Button"></button>
+            </div>
+            <ul id="menu" class="menu">
+                <li><a href="index.html#home-section" onclick="smoothScroll('home-section'); return false">Home</a></li>
+                <li><a href="index.html#about-section" onclick="smoothScroll('about-section'); return false">About</a></li>
+                <li><a href="index.html#service-section" onclick="smoothScroll('service-section'); return false">Services</a></li>
+                <li><a href="index.html#contact-section" onclick="smoothScroll('contact-section'); return false">Contact</a></li>
+                <li><a onclick="changeColorScheme()">Theme</a></li>
+            </ul>
+    </nav>
+
+    <header id="home-section" class="home-section">
+        <div class="all-container">
+            <h1>Szymon Polaczy</h1>
+            <small>Projects Made By Me</small>
+            <a href="#about-section" onclick="smoothScroll('about-section'); return false"><img
+                    src="svg/angle-down-solid.svg" alt="Learn More"></a>
+        </div>
+    </header>
+
+    <main>
+        <section class="work-showcase">
+            <h2>My Work As A Programmer</h2>
+            <div class="container">
+                <a href="http://elcomed.eu" target="_blank">
+                    <article class="project">
+                        <img src="img/elcomed.png" alt="Elcomed.Eu">
+                        <h2>Elcomed.eu</h2>
+                    </article>
+                </a>
+                <a href="http://wakepoland.com" target="_blank">
+                    <article class="project">
+                        <img src="img/adorable-animal-1920-1080.jpg" alt="WakePoland.com">
+                        <h2>WakePoland.com</h2>
+                    </article>
+                </a>
+            </div>
+        </section>
+        <section id="contact-section" class="contact-section">
+            <h2>Contact me!</h2>
+            <small>Feel free to contact me anytime!</small>
+            <div class="contacts-container">
+                <article class="contact">
+                    <a href="tel:+48691644081" target="_blank">
+                        <img src="svg/phone-solid.svg" alt="Learn More">
+                        +48 691 644 081
+                    </a>
+                </article>
+                <article class="contact">
+                    <a href="mailto:polaczyszymon@gmail.com" target="_blank">
+                        <img src="svg/envelope-solid.svg" alt="Learn More">
+                        polaczyszymon@gmail.com
+                    </a>
+                </article>
+                <article class="contact">
+                    <a href="https://github.com/szymon-polaczy" target="_blank" rel="noreferrer">
+                        <img src="svg/github-brands.svg" alt="Learn More">
+                        Github
+                    </a>
+                </article>
+                <article class="contact">
+                    <a href="https://www.instagram.com/szymon_polaczy/" target="_blank" rel="noreferrer">
+                        <img src="svg/instagram-brands.svg" alt="Learn More">
+                        Instagram
+                    </a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js" ascync></script>
+</body>
+</html>

@@ -8,6 +8,17 @@ module.exports = {
       options: {
         lang: 'en'
       }
+    },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Inter`,
+            variants: [`400`]
+          },
+        ],
+      },
     }
   ],
 };

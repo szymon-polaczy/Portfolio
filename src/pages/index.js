@@ -14,13 +14,15 @@ const Index = () => {
       <Helmet>
         <meta charSet="utf-8" />
         <title>Get Over Software</title>
+        <meta name="description" content="Get over your software problems with simple solutions, no need to over complicate thins."/>
+        <meta name="keywords" content="Software Problems, Get Over, Get, Over, Website Problems, I need a website, Simple Website, Apps, Applications"/>
         <link rel="canonical" href="https://get-over.online"/>
       </Helmet>
       <main className="p-6 box-content space-y-64 text-center text-gray-700 uppercase text-4xl">
         <header className="relative w-full h-screen ">
-          <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-7xl ">
+          <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-5xl md:text-7xl ">
             Software 
-            <span className="block lowercase text-3xl mt-4 text-gray-400">as simple as it can be</span>
+            <span className="block lowercase text-2xl md:text-3xl mt-4 text-gray-500">as simple as it can be</span>
             <a href="mailto:polaczyszymon@gmail.com" title="Contact Me" className="text-2xl hover:underline">Contact Me</a>
           </h1>
           <a href="#what" title="See more" 
@@ -34,12 +36,12 @@ const Index = () => {
         <section className="grid xl:grid-cols-2" id="what">
           <article>
             <h2>Whatever the device is</h2>
-            <img src={devices} alt="Phone, Laptop, Big Screen" className="h-125 mx-auto"/>
+            <img src={devices} alt="Phone, Laptop, Big Screen" className="max-h-125 mx-auto"/>
           </article>
 
           <article className="mt-24 xl:mt-0">
             <h2>Wherever you are</h2>
-            <img src={world} alt="Las Vegas, Chille, In the middle of the woods" className="h-125 mx-auto"/>
+            <img src={world} alt="Las Vegas, Chille, In the middle of the woods" className="max-h-125 mx-auto"/>
           </article>
         </section>
 
@@ -55,12 +57,12 @@ const Index = () => {
         <section className="grid xl:grid-cols-2">
           <article>
             <h2>Letting you stand out</h2>
-            <img src={stand_out} alt="" className="h-125 mx-auto"/>
+            <img src={stand_out} alt="" className="max-h-125 mx-auto"/>
           </article>
 
           <article className="mt-24 xl:mt-0">
             <h2>And getting your users absorbed</h2>
-            <img src={absorbed} alt="" className="h-125 mx-auto"/>
+            <img src={absorbed} alt="" className="max-h-125 mx-auto"/>
           </article>
         </section>
 

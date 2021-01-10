@@ -1,10 +1,9 @@
-import * as React from "react"
+import React from "react"
 
-// markup
-const IndexPage = () => {
+const Index = () => {
   return (
     <h1>Hello</h1>
   )
 }
 
-export default IndexPage
+export default Index

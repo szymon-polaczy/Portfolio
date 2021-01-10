@@ -8,3 +8,7 @@ html {
   font-family: 'Inter', sans-serif;
   scroll-behavior: smooth;
 }
+
+h2 {
+  @apply pb-8
+}

@@ -7,6 +7,7 @@ import simple_innovative from "./undraw_innovative_b409.svg";
 import stand_out from "./undraw_stand_out_1oag.svg";
 import absorbed from "./undraw_absorbed_in_xahs.svg";
 import contact from "./undraw_source_code_xx2e.svg";
+import favicon from "./favicon.ico";
 
 const Index = () => {
   return (
@@ -17,6 +18,7 @@ const Index = () => {
         <meta name="description" content="Get over your software problems with simple solutions, no need to over complicate thins."/>
         <meta name="keywords" content="Software Problems, Get Over, Get, Over, Website Problems, I need a website, Simple Website, Apps, Applications"/>
         <link rel="canonical" href="https://get-over.online"/>
+        <link rel="shortcut icon" type="image/jpg" href={favicon}/>
       </Helmet>
       <main className="p-6 box-content space-y-64 text-center text-gray-700 uppercase text-4xl">
         <header className="relative w-full h-screen ">

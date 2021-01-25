@@ -25,7 +25,7 @@ const Index = () => {
           <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-5xl md:text-7xl ">
             Software 
             <span className="block lowercase text-2xl md:text-3xl mt-4 text-gray-500">as simple as it can be</span>
-            <a href="mailto:polaczyszymon@gmail.com" title="Contact Me" className="text-2xl hover:underline">Contact Me</a>
+            <a href="mailto:contact@get-over.online" title="Contact Me" className="text-2xl hover:underline">Contact Me</a>
           </h1>
           <a href="#what" title="See more" 
             className="absolute bottom-12 w-max left-0 right-0 mx-auto block text-2xl 
@@ -71,7 +71,7 @@ const Index = () => {
         <section className="mb-36 relative w-full lg:w-max mx-auto">
           <h2>let's get in contact</h2>
           <img src={contact} alt="" className="w-full max-w-screen-lg mx-auto"/>
-          <a href="mailto:polaczyszymon@gmail.com" className="md:absolute md:bottom-32 md:right-24 block mt-6 md:mt-0 text-3xl hover:underline">My mail is right here</a>
+          <a href="mailto:contact@get-over.online" className="md:absolute md:bottom-32 md:right-24 block mt-6 md:mt-0 text-3xl hover:underline">This is my mail contact@get-over.online</a>
         </section>
       </main>
     </>

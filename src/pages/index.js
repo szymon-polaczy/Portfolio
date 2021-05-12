@@ -71,7 +71,7 @@ const Index = () => {
         <section className="mb-36 relative w-full lg:w-max mx-auto">
           <h2>let's get in contact</h2>
           <img src={contact} alt="" className="w-full max-w-screen-lg mx-auto"/>
-          <a href="mailto:contact@get-over.online" className="md:absolute md:bottom-32 md:right-24 block mt-6 md:mt-0 text-3xl hover:underline">contact@get-over.online</a>
+          <a href="mailto:thomas_frey@tutanota.com" className="md:absolute md:bottom-32 md:right-24 block mt-6 md:mt-0 text-3xl hover:underline">thomas_frey@tutanota.com</a>
         </section>
       </main>
     </>

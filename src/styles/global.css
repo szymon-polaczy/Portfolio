@@ -3,6 +3,13 @@
 @tailwind utilities;
 
 
+body::-webkit-scrollbar { width: 5px; }
+.code::-webkit-scrollbar { height: 5px; }
+
+*::-webkit-scrollbar-track { background: #f1f1f1; }
+*::-webkit-scrollbar-thumb { background: #888; }
+*::-webkit-scrollbar-thumb:hover { background: #555; }
+
 html {
   font-family: 'Inter', sans-serif;
   scroll-behavior: smooth;
@@ -10,4 +17,26 @@ html {
 
 h2 {
   @apply pb-8
+}
+
+.code {
+  @apply max-w-full overflow-auto mb-4;
+}
+
+code {
+  color: #31539b;
+  @apply text-sm w-max;
+}
+
+.code code {
+  background: rgba(102, 102, 102, 0.022);
+  @apply block p-3;
+}
+
+p {
+  @apply mb-4;
+}
+
+main {
+  @apply pt-6 px-6 pb-24;
 }

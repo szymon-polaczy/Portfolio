@@ -14,7 +14,7 @@ const Index = () => {
         <link rel="canonical" href="https://get-over.online"/>
         <link rel="shortcut icon" type="image/jpg" href={favicon}/>
       </Helmet>
-      <main className="p-6 box-content space-y-64 text-center text-gray-700 pb-24">
+      <main className="box-content space-y-64 text-center text-gray-700">
         <header className="relative w-full h-screen uppercase text-4xl">
           <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-5xl md:text-6xl ">
             Blog

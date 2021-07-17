@@ -17,7 +17,7 @@ const Index = () => {
         <link rel="shortcut icon" type="image/jpg" href={favicon}/>
       </Helmet>
       <main className="box-content space-y-32 text-center text-gray-700">
-        <Header title="Blog" subtitle="choose whatever is your fanyc"/>
+        <Header title="Blog" subtitle="choose whatever is your fancy"/>
 
         <section className="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="what">
           <article>

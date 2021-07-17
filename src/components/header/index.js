@@ -1,9 +1,15 @@
 import React from "react";
+import { Link } from 'gatsby'
 
 const Header = ({ title, subtitle }) => {
   return (
     <>
       <header className="relative w-full h-screen">
+        <nav className="absolute top-0 right-0 grid grid-cols-2 gap-2 text-lg">
+          <Link to="/">Home</Link>
+          <Link to="/blog/">Blog</Link>
+        </nav>
+
         <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-6xl">
           {title}
           <span className="block lowercase text-2xl md:text-3xl mt-4 text-gray-500">

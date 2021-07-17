@@ -22,7 +22,7 @@ const Index = () => {
         <link rel="canonical" href="https://get-over.online"/>
         <link rel="shortcut icon" type="image/jpg" href={favicon}/>
       </Helmet>
-      <main className="box-content space-y-64 text-center text-gray-700 uppercase">
+      <main className="box-content space-y-64 text-center text-gray-700 uppercase text-4xl">
         <Header title="Software" subtitle="as simple as it can be"/>
 
         <section className="grid xl:grid-cols-2 text-4xl" id="what">
@@ -61,7 +61,7 @@ const Index = () => {
         <section className="mb-36 relative w-full lg:w-max mx-auto">
           <h2>let's get in contact</h2>
           <img src={contact} alt="" className="w-full max-w-screen-lg mx-auto"/>
-          <a href="mailto:thomas_frey@tutanota.com" className="md:absolute md:bottom-32 md:right-24 block mt-6 md:mt-0 text-3xl hover:underline">thomas_frey@tutanota.com</a>
+          <a href="mailto:thomas_frey@tutanota.com" className="md:absolute md:bottom-32 md:right-24 block mt-6 md:mt-0 text-lg sm:text-xl lg:text-2xl xl:text-3xl hover:underline">thomas_frey@tutanota.com</a>
         </section>
       </main>
     </>

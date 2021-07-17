@@ -14,10 +14,9 @@ const Index = () => {
         <title>Get Over Software</title>
         <meta name="description" content="Get over your software problems with simple solutions, no need to over complicate thins."/>
         <meta name="keywords" content="Software Problems, Get Over, Get, Over, Website Problems, I need a website, Simple Website, Apps, Applications"/>
-        <link rel="canonical" href="https://get-over.online"/>
         <link rel="shortcut icon" type="image/jpg" href={favicon}/>
       </Helmet>
-      <main className="box-content space-y-64 text-center text-gray-700">
+      <main className="box-content space-y-32 text-center text-gray-700">
         <Header title="Blog" subtitle="choose whatever is your fanyc"/>
 
         <section className="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="what">

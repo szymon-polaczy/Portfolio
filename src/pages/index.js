@@ -1,6 +1,8 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 
+import Header from '../components/header'
+
 import devices from "./undraw_web_devices_ad58.svg";
 import world from "./undraw_connected_world_wuay.svg";
 import simple_innovative from "./undraw_innovative_b409.svg";
@@ -20,22 +22,10 @@ const Index = () => {
         <link rel="canonical" href="https://get-over.online"/>
         <link rel="shortcut icon" type="image/jpg" href={favicon}/>
       </Helmet>
-      <main className="box-content space-y-64 text-center text-gray-700 uppercase text-4xl">
-        <header className="relative w-full h-screen ">
-          <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-5xl md:text-7xl ">
-            Software 
-            <span className="block lowercase text-2xl md:text-3xl mt-4 text-gray-500">as simple as it can be</span>
-            <a href="mailto:thomas_frey@tutanota.com" title="Contact Me" className="text-2xl hover:underline">Contact Me</a>
-          </h1>
-          <a href="#what" title="See more" 
-            className="absolute bottom-12 w-max left-0 right-0 mx-auto block text-2xl 
-              text-gray-500 transform hover:scale-110 duration-200 transition-all"
-          >
-            See more
-          </a>
-        </header>
+      <main className="box-content space-y-64 text-center text-gray-700 uppercase">
+        <Header title="Software" subtitle="as simple as it can be"/>
 
-        <section className="grid xl:grid-cols-2" id="what">
+        <section className="grid xl:grid-cols-2 text-4xl" id="what">
           <article>
             <h2>Whatever the device is</h2>
             <img src={devices} alt="Phone, Laptop, Big Screen" className="max-h-125 mx-auto"/>

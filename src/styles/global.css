@@ -45,6 +45,23 @@ main {
   @apply pt-6 pb-3 text-xl md:text-3xl;
 }
 
+.blog-headline-3 {
+  @apply pt-4 pb-2 text-lg md:text-2xl;
+}
+
 hr {
   @apply my-5;
+}
+
+.blog-list {
+  list-style-type: disc;
+  padding-left: .85rem;
+}
+
+.blog-list li {
+  padding-left: .3rem;
+}
+
+.blog-list li:not(:last-child) {
+  padding-bottom: .35rem;
 }

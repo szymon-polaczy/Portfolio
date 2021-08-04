@@ -36,7 +36,7 @@ const Index = () => {
           <p>Example - I'm looking for this kind of link <i>domain.com/cities/city_name/section_name</i>, which then allows me to show the user section_name terms page without overriting the parent term slug in the url.
             Basically changing this <i>domain.com/cities/section_name</i> (no city name - where the heck is this section located) to this <i>domain.com/cities/city_name/section_name</i> (nice and simple. now I know where I am)</p>
           <div className="code">
-            <code dangerouslySetInnerHTML={{__html: `add_rewrite_rule('cities/([a-z0-9-_]+)/([a-z0-9-_]+), 'index.php?cities=$matches[2], 'top);`}}></code>
+            <code dangerouslySetInnerHTML={{__html: `add_rewrite_rule('cities/([a-z0-9-_]+)/([a-z0-9-_]+)', 'index.php?cities=$matches[2]', 'top');`}}></code>
           </div>
           <p>And this is how you should check for every allowed character in the slug <code>([a-z0-9-_]+)</code></p>
 

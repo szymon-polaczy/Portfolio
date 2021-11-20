@@ -3,6 +3,8 @@
     <section>
       <h2>Here's our blogposts</h2>
 
+      <hr>
+
       <div class="container">
         <article v-for="edge in $page.markdownages.edges" :key="edge.node.id">
           <router-link :to="{path: 'post/' + edge.node.id}">
@@ -41,5 +43,15 @@ export default {
 <style>
 .home-links a {
   margin-right: 1rem;
+}
+
+.container a {
+  color: #000;
+  text-decoration: none;
+}
+
+.container a:focus,
+.container a:hover {
+  text-decoration: underline;
 }
 </style>

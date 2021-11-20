@@ -1,7 +1,9 @@
 <template>
-  <Layout>
+    <Layout>  
+        <main v-html="$page.markdownPost.content"/>
 
-    <main v-html="$page.markdownPost.content"/>
+        <g-link to="/" class="go-back-link">Go to homepage</g-link>
+
     </Layout>
 </template>
 
@@ -16,4 +18,11 @@
 
 
 <style>
+    .go-back-link {
+        text-decoration: none;
+        color: #000;
+        margin: 5rem auto;
+        display: block;
+        width: max-content;
+    }
 </style>

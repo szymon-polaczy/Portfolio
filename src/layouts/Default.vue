@@ -4,9 +4,6 @@
       <strong>
         <g-link to="/">{{ $static.metadata.siteName }}</g-link>
       </strong>
-      <nav class="nav">
-        <g-link class="nav__link" to="/">Home</g-link>
-      </nav>
     </header>
     <slot/>
   </div>
@@ -42,6 +39,17 @@ body {
   margin-bottom: 20px;
   height: 80px;
 }
+
+.header a {
+  color: #000;
+  text-decoration: none;
+}
+
+.header a:focus,
+.header a:hover {
+  text-decoration: underline;
+}
+
 
 .nav__link {
   margin-left: 20px;

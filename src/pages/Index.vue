@@ -1,22 +1,34 @@
 <template>
   <Layout>
+    <section>
+      <h2>Here's our blogposts</h2>
 
-    <!-- Learn how to use images here: https://gridsome.org/docs/images -->
-    <g-image alt="Example image" src="~/favicon.png" width="135" />
-
-    <h1>Hello, world!</h1>
-
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
-    </p>
-
-    <p class="home-links">
-      <a href="https://gridsome.org/docs/" target="_blank" rel="noopener">Gridsome Docs</a>
-      <a href="https://github.com/gridsome/gridsome" target="_blank" rel="noopener">GitHub</a>
-    </p>
+      <div class="container">
+        <article v-for="edge in $page.markdownages.edges" :key="edge.node.id">
+          <router-link :to="{path: 'post/' + edge.node.id}">
+            <h3>{{edge.node.title}}</h3>
+            <p>{{edge.node.excerpt}}</p>
+          </router-link>
+        </article>
+      </div>
+    </section>
 
   </Layout>
 </template>
+
+<page-query>
+  query {
+    markdownages: allMarkdownPost {
+      edges {
+        node {
+          id,
+          title,
+          excerpt
+        }
+      }
+    }
+  }
+</page-query>
 
 <script>
 export default {

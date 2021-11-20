@@ -5,6 +5,22 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: 'Gridsome',
-  plugins: []
+  siteName: 'Get Over Online',
+  plugins: [
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'static/posts/**/*.md',
+        typeName: 'markdownPost',
+        remark: {
+          //Config options can be added here
+        }
+      }
+    }
+  ],
+  transformers: {
+    remark: {
+      //Config options can be added here
+    }
+  }
 }

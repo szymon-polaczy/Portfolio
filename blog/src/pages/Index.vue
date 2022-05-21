@@ -54,4 +54,8 @@ export default {
 .container a:hover {
   text-decoration: underline;
 }
+
+ol, ul {
+  padding-inline-start: 17px;
+}
 </style>

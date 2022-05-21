@@ -5,7 +5,7 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: 'Get Over Online',
+  siteName: 'Get Over Life - Blog',
   plugins: [
     {
       use: '@gridsome/source-filesystem',
@@ -18,6 +18,7 @@ module.exports = {
       }
     }
   ],
+  pathPrefix: "/blog",
   transformers: {
     remark: {
       //Config options can be added here

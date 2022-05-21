@@ -7,7 +7,7 @@
 
       <div class="container">
         <article v-for="edge in $page.markdownages.edges" :key="edge.node.id">
-          <router-link :to="{path: 'post/' + edge.node.id}">
+          <router-link :to="{path: 'post/' + edge.node.title.replace(/ /g, '-').replace(/\?/g, '').toLowerCase() + '/'}">
             <h3>{{edge.node.title}}</h3>
             <p>{{edge.node.excerpt}}</p>
           </router-link>

@@ -5,12 +5,14 @@
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
+const slug = (title) => {
+  return title.replace(/ /g, '-').replace(/\?/g, '').toLowerCase();
+};
+
 module.exports = function (api) {
   api.loadSource(({ addCollection }) => {
     // Use the Data Store API here: https://gridsome.org/docs/data-store-api/
   })
-
-
 
   api.createPages(async ({ graphql, createPage }) => {
     const { data } = await graphql(`
@@ -28,7 +30,7 @@ module.exports = function (api) {
 
     data.markdownages.edges.forEach(({ node }) => {
       createPage({
-        path: `/blog/post/${node.id}`,
+        path: `/blog/post/${slug(node.title)}`,
         component: './src/templates/post.vue',
         context: {
           id: node.id

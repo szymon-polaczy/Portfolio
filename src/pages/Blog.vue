@@ -15,6 +15,8 @@
       </div>
     </section>
 
+    <g-link to="/" class="go-back-link">Go back</g-link>
+
   </Layout>
 </template>
 

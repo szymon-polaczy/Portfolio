@@ -11,5 +11,7 @@
     "@gridsome/transformer-remark": "^0.6.4",
     "gridsome": "^0.7.0"
   },
-  "homepage": "."
+  "homepage": ".",
+  "devDependencies": {
+  }
 }

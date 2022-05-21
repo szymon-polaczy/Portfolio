@@ -18,7 +18,6 @@ module.exports = {
       }
     }
   ],
-  pathPrefix: "/blog",
   transformers: {
     remark: {
       //Config options can be added here

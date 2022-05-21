@@ -28,7 +28,7 @@ module.exports = function (api) {
 
     data.markdownages.edges.forEach(({ node }) => {
       createPage({
-        path: `/post/${node.id}`,
+        path: `/blog/post/${node.id}`,
         component: './src/templates/post.vue',
         context: {
           id: node.id
